@@ -10,10 +10,11 @@ pdfjsLib.getDocument(url).promise.then(async function (pdf) {
 
     const slide = document.createElement('div');
     slide.className = 'swiper-slide';
+
     const pageContainer = document.createElement('div');
     pageContainer.className = 'page-container';
     pageContainer.style.width = viewport.widthpx;
-    pageContainer.style.height = viewport.heightpx;
+    pageContainer.style.height = {viewport.height}px;
 
     const canvas = document.createElement('canvas');
     canvas.className = 'canvas-layer';
@@ -26,7 +27,7 @@ pdfjsLib.getDocument(url).promise.then(async function (pdf) {
     const textLayerDiv = document.createElement('div');
     textLayerDiv.className = 'text-layer';
     textLayerDiv.style.width = viewport.widthpx;
-    textLayerDiv.style.height = viewport.heightpx;
+    textLayerDiv.style.height = {viewport.height}px;
 
     const textContent = await page.getTextContent();
     pdfjsLib.renderTextLayer({
