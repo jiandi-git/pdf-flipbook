@@ -45,8 +45,8 @@ pdfjsLib.getDocument(url).promise.then(async function (pdf) {
 
   new Swiper('.swiper-container', {
     direction: 'horizontal',
-    slidesPerView: 2,
-    spaceBetween: 10,
+    slidesPerView: 1,
+    spaceBetween: 0,
     allowTouchMove: true,
     mousewheel: true,
     keyboard: true,
